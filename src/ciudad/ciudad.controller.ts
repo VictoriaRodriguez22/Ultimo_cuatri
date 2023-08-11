@@ -10,7 +10,7 @@ export class CiudadController {
   constructor(private ciudadService: CiudadService) { }
 
   @Post()
-  createCiudad(@Body() createCiudadDto: createCiudadDTO): Promise<Ciudad> {
+  createCiudad(@Body() createCiudadDto: createCiudadDTO) {
     return this.ciudadService.createCiudad(createCiudadDto);
   }
 
@@ -20,7 +20,7 @@ export class CiudadController {
   }
 
   @Get(':id')
-  findOne(@Param('id', ParseIntPipe) id: number): Promise<Ciudad> {
+  findOne(@Param('id', ParseIntPipe) id: number){
     return this.ciudadService.findOne(id);
   }
 

@@ -1,5 +1,6 @@
 export class createCiudadDTO{
 
-    id :number;
-    nombre :string;
+    public id :number;
+    public nombre :string;
+    public codigoPostal: number;
    }
